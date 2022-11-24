@@ -1,5 +1,5 @@
 # Informationssysteme
-> <i>Die Lehre der Datenbanken<i/>
+> **Die Lehre der Datenbanken**
  
 --
 
