@@ -39,6 +39,8 @@ Damit die Datenbanken funktionieren müssen gewisse Regelungen eingehalten werde
 Die Standards kommen bei quasi jeder professionellen Datenbank zum Einsatz und sind essenziell zu verstehen, um selbst
 vernünftig mit Datenbanken arbeiten zu können.
 
+---
+
 ## Abfragen an Datenbanken stellen mit SQL
 
 Um mit der Datenbank zu kommunizieren, gibt es die Structured Query Language kurz SQL.
