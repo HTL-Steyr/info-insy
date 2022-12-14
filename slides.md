@@ -1,317 +1,113 @@
 # Informationssysteme
-> **Die Lehre der Datenbanken**
- 
---
 
-## Typography
+(INSY)
 
 ---
 
-## Quotes
+## Stundentafel
 
-> Quotes are ~~hard~~ easy
-> to write - but you can use `code`
-
----
-
-## Styles
-
-You can freely mix **bold**, *italics*, `code` and normal styles
-
-* normal
-* **bold**
-* *italics*
-* `code`
+| Gegenstand          | 1.  | 2.  | 3.  | 4.  | 5.  |
+|---------------------|-----|-----|-----|-----|-----|
+| Informationssysteme | -   | -   | 3   | 3   | 2   |
 
 --
 
-## Lists
+## Warum gibt es das Fach?
+
+* Warum Datenbanksysteme
+
+* Standards von Datenbanksystemen
+
+* Abfragen an Datenbanken stellen mit SQL
+
+* Datenbanken in Verbindung mit Programmierprojekten
 
 ---
 
-## Unordered Lists
+## Warum Datenbanksysteme
 
-* a
-* b
-  * 1
-  * 2
-    * I
-* c
+Heutzutage ist es nötig, viele Daten zu speichern und mit diesen Daten *effizient* arbeiten zu können.
+Dafür gibt es Datenbankensysteme, in denen diese Daten gespeichert werden.
+Diese Standards kommen bei quasi jeder professionelen Datenbank zum Einsatz und sind essentiel zu verstehen, um
+vernünftig mit Datenbanken arbeiten zu können.
 
 ---
 
-## Ordered Lists
+## Standards von Datenbanksystemen
 
-automatic numbering
+Damit die Datenbanken funktionieren müssen gewisse Regelungen eingehalten werden.
+Die Standards kommen bei quasi jeder professionellen Datenbank zum Einsatz und sind essenziell zu verstehen, um selbst
+vernünftig mit Datenbanken arbeiten zu können.
 
-1. a
-1. b
-    1. 1
-    1. 2
-1. c
+## Abfragen an Datenbanken stellen mit SQL
 
----
-
-## Ordered Lists
-
-custom numbering
-
-1. a  
-2. b  
-    2.1. 1  
-    2.2. 2  
-3. c
+Um mit der Datenbank zu kommunizieren, gibt es die Structured Query Language kurz SQL.
+SQL-statements schreiben kann eine hohe Komplexität annehmen und hat somit einen größeren Lernbedarf.
 
 ---
 
-## Definition Lists
+## Datenbanken in Verbindung mit Programmierprojekten
 
-(actually: line breaks in long lines in lists...)
-
-* First Term  
-This is the definition of the first term.
-* Second Term  
-This is one definition of the second term.  
-This is another definition of the second term.
-
----
-
-## Font Awesome
-
-*  Itym One<!-- .element: class="mdfa fa-info-circle"--> (this is a feature test in a very long item)
-*  Itym Two<!-- .element: class="mdfa fa-question-circle"-->
-*  Itym Three<!-- .element: class="mdfa fa-exclamation-circle"-->
-*  Itym 4<!-- .element: class="mdfa fa-exclamation-triangle"-->  
-with forced line break!
+In komplexen Anwendungen stehen herkömmliches Programmieren und SQL in enger Verbindung.
+Daten die z.B. über die Benutzeroberfläche einer Anwendung eingegeben werden, müssen dann über SQL-Statements in eine
+Datenbank eingefügt oder aktualisiert werden.
 
 --
 
-## Fragments
+# Technologien
+
+Was erwartet dich?
 
 ---
 
-## Dont reveal all at once!
+## Microsoft Access
 
-- Item 1 <!-- .element: class="fragment" data-fragment-index="2" -->
-- Item 2 <!-- .element: class="fragment" data-fragment-index="1" -->
-- Item 3 <!-- .element: class="fragment" data-fragment-index="3" -->
-
----
-
-## Fancy!
-
-- Highlight Red <!-- .element: class="fragment highlight-red" data-fragment-index="2" -->
-- Fade In Then Out <!-- .element: class="fragment fade-in-then-out" data-fragment-index="1" -->
-- Slide up <!-- .element: class="fragment fade-up" data-fragment-index="3" -->
-- Appear and step aside  <!-- .element: class="fragment fade-in-then-semi-out" data-fragment-index="4" -->
+Access bietet einen angenehmen Einstieg ins praktische Arbeiten
+mit Datenbanken. Durch die gewohnte Office-Oberfläche wird man
+nicht ins kalte Wasser geworfen. <br />
+![MS Access Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Microsoft_Office_Access_%282019-present%29.svg/180px-Microsoft_Office_Access_%282019-present%29.svg.png) <br />
+<small>[Bildquelle](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Microsoft_Office_Access_%282019-present%29.svg/180px-Microsoft_Office_Access_%282019-present%29.svg.png)</small>
 
 ---
 
-## Distinguished
+## ER-Diagramme
 
-- Item 1 <!-- .element: class="fragment semi-fade-out" data-fragment-index="1" -->
-- Item 2 <!-- .element: class="fragment semi-fade-out" data-fragment-index="2" -->
-- Item 3 <!-- .element: class="fragment semi-fade-out" data-fragment-index="3" -->
-- Item 4 <!-- .element: class="fragment semi-fade-out" data-fragment-index="4" -->
-- Item 5
+**E**ntity-**R**elationship-Diagramme helfen beim planen von Datenbanken. Hierbei werden die Tabellen (Entitys)
+aufgezeichnet und auf Basis der Natur ihrer Zusammenhänge (Relationships) auf verschiedene Arten verbunden.
+
+<img src="resources/Erdiagramm.png">
+---
+
+## SQL
+
+Verständnis der **S**tructured **Q**uery **L**anguage ist essenziell für jeden ITler.
+Mit dieser Sprache kann man auf die meisten gängigen Datenbanksysteme zugreifen um Daten zu lesen oder zu schreiben.
+Außerdem werden dir Eigenheiten verschiedener Datenbanksysteme beigebracht.
+
+```sql
+SELECT first_name, last_name
+FROM employee e
+         INNER JOIN department d ON e.abt_id = a.id
+WHERE lower(m.job) = 'manager';
+```
 
 ---
 
-## FAQ (Example)
+## JDBC / PDO
 
-*  Question One?<!-- .element: class="fragment mdfa fa-question-circle"-->
-*  Answer One!<!-- .element: class="fragment mdfa fa-exclamation-circle"-->
-*  Question Two?<!-- .element: class="fragment mdfa fa-question-circle"-->
-*  Answer Two!<!-- .element: class="fragment mdfa fa-exclamation-circle"-->
-*  Question Three?<!-- .element: class="fragment mdfa fa-question-circle"-->
-*  Answer Three!<!-- .element: class="fragment mdfa fa-exclamation-circle"-->
+JDBC und PDO sind Zusatzfunktionalitäten für die Programmiersprachen Java und PHP. Mit ihnen wird der Datenbankzugriff
+für viele Datenbanksysteme vereinheitlicht. So lassen sich leicht SQL-Statements in deinen Programmen ausführen!
 
---
+```php
+$dbh = new PDO('pgsql:host=xserv;dbname=pagila', "reader", "reader");
+$res = $dbh->query('SELECT language_id, name from language');
 
-## Syntax highlighting   
-
----
-
-## Java 
-
-```java [1-6|3-5]
-public class TheFirst extends Object
-{
-  
-public static void main(String[] args)
-  
-{
-  
-}
+while ($row = $res->fetch()) {
+    echo $row['language_id'] . $row['name'];
 }
 ```
 
----
+-
 
-## JavaScript
-
-```js [1-2|3|4]
-    let a = 1;
-    let b = 2;
-    let c = x => 1 + 2 + x;
-    c(3);
-```
-
----
-
-## Callouts 
-
-<!--https://fsymbols.com/signs/bullet-point/-->
-```java
-String switchExpressionPreview13(Direction way) {
-    return switch (way) {                         ➊
-        case N -> "Up";                           ➋
-        case S -> { yield "Down"; }               ➌
-        case E, W -> "Somewhere left or right";
-        // default -> "Foo"                       ➍
-    };
-}
-```
-
-- ➊ `switch` can be used as expression
-- ➋ `->` instead of `:` → no `break;` necessary!
-- ➌ Lambdas can be used to. For _expressions_ they must `yield` a value [version]#13#
-- ➍ `default` can be ommitted if a) no expression or b) `enum` with every value handled
-
----
-
-## Callouts  (Alternative)
-
-<!--https://fsymbols.com/signs/bullet-point/-->
-```java
-String switchExpressionPreview13(Direction way) {
-    return switch (way) {                         ①
-        case N -> "Up";                           ②
-        case S -> { yield "Down"; }               ③
-        case E, W -> "Somewhere left or right";
-        // default -> "Foo"                       ④
-    };
-}
-```
-- ① <!-- .element: class="co"-->`switch` can be used as expression 
-- ② <!-- .element: class="co"-->`->` instead of `:` → no `break;` necessary!
-- ③ <!-- .element: class="co"-->Lambdas can be used to. For _expressions_ they must `yield` a value [version]#13#
-- ④ <!-- .element: class="co"-->`default` can be ommitted if a) no expression or b) `enum` with every value handled
-
----
-
-#### Try-with-resources now support „effectively final“ variables
-
-```java
-var inputStream = new FileInputStream(".gitignore");
-try (inputStream) { … }
-```
-
-#### Private methods in Interfaces<!-- .element: class="fragment" data-fragment-index="2" -->
-
-```java
-interface Version {
-    byte[] digits();
-    default String text() { return text(digits()); }
-    private String text(byte[] version) { … }
-}
-```
-<!-- .element: class="fragment" data-fragment-index="2" -->
-
---
-
-## Math
-
----
-
-## Single Line
-
-
-`$$ J(\theta_0,\theta_1) = \sum_{i=0} $$`
-
----
-
-## Multiple lines
-
-`$$\begin{aligned}
-  \dot{x} & = \sigma(y-x) \\
-  \dot{y} & = \rho x - y - xz \\
-  \dot{z} & = -\beta z + xy
-  \end{aligned} $$`
-
---
-
-## Being subtle
-
-* Point a
-* Point b   
-<span>(but that is not important)</span><!-- .element: class="decent x-small"-->
-* Point c
-
---
-
-## Images
-
-<span>To say it with
-[Dilbert](https://dilbert.com/strip/1995-12-10):</span><!-- .element: class="decent x-small"-->
-
-![](https://assets.amuniversal.com/0e1eaf909fcf012f2fe600163e41dd5b)
-
---
-
-## Transitions
-
----
-
-<!-- .slide:  data-transition="slide"-->
-### The train goes on ...
-* none<!-- .element: class="xx-small"-->  
-Switch backgrounds instantly
-* fade<!-- .element: class="xx-small"-->  
-Cross fade — default for background transitions
-* slide<!-- .element: class="xx-small"-->  
-Slide between backgrounds — default for slide transitions
-* convex<!-- .element: class="xx-small"-->  
-Slide at a convex angle
-* concave<!-- .element: class="xx-small"-->  
-Slide at a concave angle
-* zoom<!-- .element: class="xx-small"-->  
-Scale the incoming slide up so it grows in from the center of the screen
-
----
-
-<!-- .slide:  data-transition="slide"-->
-### and on …
-* none<!-- .element: class="xx-small"-->  
-Switch backgrounds instantly
-* fade<!-- .element: class="xx-small"-->  
-Cross fade — default for background transitions
-
----
-
-<!-- .slide:  data-transition="convex-in concave-out"-->
-### and stops.
-* fade<!-- .element: class="xx-small"-->  
-Cross fade — default for background transitions
-* slide<!-- .element: class="xx-small"-->  
-Slide between backgrounds — default for slide transitions
-
----
-
-<!-- .slide:  data-transition="fade-in fade-out"-->
-### (Passengers entering and leaving)
-* slide<!-- .element: class="xx-small"-->  
-Slide between backgrounds — default for slide transitions
-* convex<!-- .element: class="xx-small"-->  
-Slide at a convex angle
-
----
-
-<!-- .slide:  data-transition="fade"-->
-### And it starts again.
-* convex<!-- .element: class="xx-small"-->  
-Slide at a convex angle
-* concave<!-- .element: class="xx-small"-->  
-Slide at a concave angle
 
 
