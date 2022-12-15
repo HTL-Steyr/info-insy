@@ -49,7 +49,7 @@ vernünftig mit Datenbanken arbeiten zu können.
 ## Abfragen an Datenbanken stellen mit SQL
 
 Um mit der Datenbank zu kommunizieren, gibt es die Structured Query Language, kurz SQL.
-SQL-statements schreiben kann eine hohe Komplexität annehmen und hat somit einen größeren Lernbedarf.
+SQL-Statements schreiben kann eine hohe Komplexität annehmen und hat somit einen größeren Lernbedarf.
 
 ---
 
