@@ -14,11 +14,11 @@
 
 ## Warum gibt es das Fach?
 
-* Warum Datenbanksysteme
+* Warum Datenbanksysteme?
 
-* Standards von Datenbanksystemen
+* Theorie hinter Datenbanksystemen
 
-* Abfragen an Datenbanken stellen mit SQL
+* Abfragen stellen mit SQL
 
 * Datenbanken in Verbindung mit Programmierprojekten
 
@@ -26,24 +26,29 @@
 
 ## Warum Datenbanksysteme
 
-Heutzutage ist es nötig, viele Daten zu speichern und mit diesen Daten *effizient* arbeiten zu können.
-Dafür gibt es Datenbankensysteme, in denen diese Daten gespeichert werden.
-Diese Standards kommen bei quasi jeder professionelen Datenbank zum Einsatz und sind essentiel zu verstehen, um
-vernünftig mit Datenbanken arbeiten zu können.
+Heutzutage ist es nötig, ernorme Mengen an Daten zu speichern und mit diesen *effizient* arbeiten zu können.
+Dafür gibt es Datenbankensysteme, wo diese strukturiert gespeichert sind und abgefragt werden können.
 
+---
+## Verschiedene Arten von DBS
+- Key-Value Datenbanken
+- Dokumentenbasierte Datenbanken
+- Relationale Datenbanken <br /><br />
+...und viele mehr. Diese haben verschiedene Vor- und Nachteile. Am weitesten verbreitet sind relationale Datenbanken,
+dort werden die Daten in Tabellen (Relationen) gespeichert. Im Unterricht weden Hauptsächlich diese behandelt.
 ---
 
 ## Standards von Datenbanksystemen
 
-Damit die Datenbanken funktionieren müssen gewisse Regelungen eingehalten werden.
-Die Standards kommen bei quasi jeder professionellen Datenbank zum Einsatz und sind essenziell zu verstehen, um selbst
+Damit die Datenbanken einwandfrei funktionieren müssen gewisse Regelungen eingehalten werden.
+Diese Regelungen kommen bei jeder professionellen Datenbank zum Einsatz und sind essenziell zu verstehen, um selbst
 vernünftig mit Datenbanken arbeiten zu können.
 
 ---
 
 ## Abfragen an Datenbanken stellen mit SQL
 
-Um mit der Datenbank zu kommunizieren, gibt es die Structured Query Language kurz SQL.
+Um mit der Datenbank zu kommunizieren, gibt es die Structured Query Language, kurz SQL.
 SQL-statements schreiben kann eine hohe Komplexität annehmen und hat somit einen größeren Lernbedarf.
 
 ---
