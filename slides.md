@@ -14,20 +14,31 @@
 
 ## Warum gibt es das Fach?
 
-* Warum Datenbanksysteme?
+* Was sind Datenbanken?
+
+* Warum brauchen wir Datenbanksysteme?
 
 * Theorie hinter Datenbanksystemen
 
-* Abfragen stellen mit SQL
+* Datenbankzugriffe mit SQL
 
 * Datenbanken in Verbindung mit Programmierprojekten
 
 ---
 
-## Warum Datenbanksysteme
+## Was sind Datenbanken?
 
-Heutzutage ist es nötig, ernorme Mengen an Daten zu speichern und mit diesen *effizient* arbeiten zu können.
-Dafür gibt es Datenbankensysteme, wo diese strukturiert gespeichert sind und abgefragt werden können.
+**Datenbanken** ermöglichen es große Mengen an Daten strukturiert zu speichern. 
+Das darum aufgebaute **D**aten**b**ank**s**ystem ermöglich das Einfügen, Lesen,
+Verändern und Löschen der Daten und kümmert sich dabei auch um z.B. Events und 
+Trigger, welche automatisch ausgeführt werden. 
+
+---
+
+## Warum brauchen wir Datenbanksysteme?
+
+Heutzutage ist es nötig, enorme Mengen an Daten zu speichern und diese *effizient* verarbeiten zu können.
+In Datenbanksystemen können diese strukturiert gespeichert sowie abgefragt werden.
 
 ---
 ## Verschiedene Arten von DBS
@@ -35,29 +46,26 @@ Dafür gibt es Datenbankensysteme, wo diese strukturiert gespeichert sind und ab
 - Dokumentenbasierte Datenbanken
 - Relationale Datenbanken <br /><br />
 ...und viele mehr. Diese haben verschiedene Vor- und Nachteile. Am weitesten verbreitet sind relationale Datenbanken,
-dort werden die Daten in Tabellen (Relationen) gespeichert. Im Unterricht weden Hauptsächlich diese behandelt.
+dort werden die Daten in Tabellen (Relationen) gespeichert. Im Unterricht werden hauptsächlich diese behandelt.
 ---
 
 ## Standards von Datenbanksystemen
 
 Damit die Datenbanken einwandfrei funktionieren müssen gewisse Regelungen eingehalten werden.
-Diese Regelungen kommen bei jeder professionellen Datenbank zum Einsatz und sind essenziell zu verstehen, um selbst
-vernünftig mit Datenbanken arbeiten zu können.
+Diese Regeln kommen bei jeder Datenbank zum Einsatz und bilden das Fundament für die Datenbank.
 
 ---
 
-## Abfragen an Datenbanken stellen mit SQL
+## Datebankzugriffe mit SQL
 
-Um mit der Datenbank zu kommunizieren, gibt es die Structured Query Language, kurz SQL.
-SQL-Statements schreiben kann eine hohe Komplexität annehmen und hat somit einen größeren Lernbedarf.
+Mittels SQL-Statements kann man Daten in die Datenbank lesen, schreiben, verändern und löschen.
 
 ---
 
 ## Datenbanken in Verbindung mit Programmierprojekten
-
-In komplexen Anwendungen stehen herkömmliches Programmieren und SQL in enger Verbindung.
-Daten die z.B. über die Benutzeroberfläche einer Anwendung eingegeben werden, müssen dann über SQL-Statements in eine
-Datenbank eingefügt oder aktualisiert werden.
+Hinter den meisten Anwendungen kommen Datenbanken zum Einsatz.
+Daten die z.B. über die Benutzeroberfläche einer Anwendung eingegeben werden,
+werden dann über diese Datenbanken verwaltet.
 
 --
 
@@ -79,17 +87,16 @@ nicht ins kalte Wasser geworfen. <br />
 
 ## ER-Diagramme
 
-**E**ntity-**R**elationship-Diagramme helfen beim planen von Datenbanken. Hierbei werden die Tabellen (Entitys)
-aufgezeichnet und auf Basis der Natur ihrer Zusammenhänge (Relationships) auf verschiedene Arten verbunden.
+**E**ntity-**R**elationship-Diagramme helfen beim Planen von Datenbanken. In ER-Diagrammen werden die Tabellen (Entities)
+und ihre Abhängigkeiten/Zusammenhänge (Relationships) visualisiert.
 
 <img src="resources/Erdiagramm.png">
 ---
 
 ## SQL
 
-Verständnis der **S**tructured **Q**uery **L**anguage ist essenziell für jeden ITler.
-Mit dieser Sprache kann man auf die meisten gängigen Datenbanksysteme zugreifen um Daten zu lesen oder zu schreiben.
-Außerdem werden dir Eigenheiten verschiedener Datenbanksysteme beigebracht.
+Verständnis der **S**tructured **Q**uery **L**anguage ist essenziell für den Umgang mit Datenbanken.
+Mit SQL kann man auf Datenbanksysteme zugreifen und Daten lesen, schreiben, löschen und aktualisieren.
 
 ```sql
 SELECT first_name, last_name
@@ -97,24 +104,3 @@ FROM employee e
          INNER JOIN department d ON e.abt_id = a.id
 WHERE lower(m.job) = 'manager';
 ```
-
----
-
-## JDBC / PDO
-
-JDBC und PDO sind Zusatzfunktionalitäten für die Programmiersprachen Java und PHP. Mit ihnen wird der Datenbankzugriff
-für viele Datenbanksysteme vereinheitlicht. So lassen sich leicht SQL-Statements in deinen Programmen ausführen!
-
-```php
-$dbh = new PDO('pgsql:host=xserv;dbname=pagila', "reader", "reader");
-$res = $dbh->query('SELECT language_id, name from language');
-
-while ($row = $res->fetch()) {
-    echo $row['language_id'] . $row['name'];
-}
-```
-
--
-
-
-
